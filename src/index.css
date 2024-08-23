@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* Default font family */
+  line-height: 1.6;
+  /* Default line height for better readability */
+}
+
+ul,
+ol {
+  list-style: none;
+  /* Remove default list styling */
+}
+
+a {
+  text-decoration: none;
+  /* Remove default underline from links */
+  color: inherit;
+  /* Inherit color from parent element */
+}
+
+table {
+  border-collapse: collapse;
+  /* Collapse table borders */
+  border-spacing: 0;
+  /* Remove default table cell spacing */
+}
+
+.navbar img {
+  max-width: 100%;
+  /* Ensure images fit within their containers */
+  height: auto;
+  mix-blend-mode:difference;
+  /* Maintain aspect ratio */
+}
+
+.caret {
+  transition: transform 0.3s ease;
+}
+
+.caret.rotated {
+  transform: rotate(180deg);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* Ensure form elements inherit font styling */
+  border: none;
+  /* Remove default border styling */
+  background: none;
+  /* Remove default background styling */
+  cursor: pointer;
+  /* Ensure cursor is pointer on buttons */
+}
+
+fieldset {
+  border: none;
+  /* Remove default border */
+  padding: 0;
+  /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+}
+
+legend {
+  border: none;
+  /* Remove default border */
+}
+
+textarea {
+  overflow: auto;
+  /* Ensure scrollbars appear if needed */
+}
+
+body {
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+  /* Optional: Default background color */
+}
+
+
+:root {
+  --bg:  #242526;
+  --bg-accent: #484a4d;
+  --text-color: #b4b4b4;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 15px;
+  --speed: 500ms; 
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;;
+}
+
+/* Top Navigation Bar */
+
+/* <nav> */
+.navbar {
+  height: var(--nav-size);
+  backdrop-filter: blur(15px);
+  padding: 0.5rem 1rem;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 1rem);
+  z-index: 9999;
+}
+
+/* <ul> */
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-nav .home {
+  margin-right: auto;
+  cursor: pointer;
+  filter: grayscale(100%) contrast(300%);
+}
+
+/* <li> */
+.nav-item {
+  width: calc(var(--nav-size) * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Icon Button */
+.icon-button {
+  --button-size: calc(var(--nav-size) * 0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  background-color: #000000;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+
+.icon-button:hover {
+  filter: brightness(1.5);
+}
+
+.icon-button svg { 
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Dropdown Menu */
+
+.dropdown {
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+}
+
+.menu {
+  width: 100%;
+  position: relative;
+
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.menu-item .icon-button {
+  margin-right: 0.5rem;
+}
+
+
+.menu-item .icon-button:hover {
+  filter: none;
+}
+
+.menu-item:hover {
+  background-color: #525357;
+}
+
+.icon-right {
+  margin-left: auto;
+}
+
+/* CSSTransition classes  */
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+  width: 100%;
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+  width: 100%;
+}
+.menu-primary-exit {
+  position: absolute;
+  width: 100%;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+  width: 100%;
+}
+
+
+.menu-secondary-enter {
+  transform: translateX(110%);
+  width: 100%;
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+  width: 100%;
+}
+
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .navbar {
+    padding: 0.5rem 0.2rem;
+    width: calc(100vw - 0.2rem);
+  }
+  
+}

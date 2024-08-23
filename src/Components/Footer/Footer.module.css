@@ -1,0 +1,229 @@
+.footer {
+    width: 100%;
+    min-height:80vh;
+    backdrop-filter: blur(25px);
+    padding: 20px;
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    width: 40%;
+    color: white;
+}
+
+.contact {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+}
+
+.socials {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    width: 10%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialsIcon {
+    cursor: pointer;
+    animation-duration: 3s;
+}
+
+.left {
+    position: absolute;
+    left: 45%;
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100% - 60px);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.buttonIcon {
+    cursor: pointer;
+    color: white;
+    animation-duration: 3s;
+}
+
+.buttonIcon:hover {
+    color: #000;
+}
+
+.socials a {
+    text-decoration: none;
+    color: unset;
+}
+
+.buttonContent {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    box-shadow: 0 10px 20px black;
+    background-color: #000;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.timetable {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px white;
+    overflow: hidden;
+    width: 300px;
+}
+
+.dayGroup {
+    border-bottom: 1px solid white;
+    padding: 15px;
+    text-align: center;
+}
+
+.dayGroup:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.hours {
+    font-size: 1rem;
+    color: white;
+}
+
+.tel {
+    color: white;
+}
+
+.tel:hover {
+    color: black;
+}
+
+.paymentContainer {
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.heading {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.paymentList {
+    list-style: none;
+    padding: 0;
+}
+
+.paymentItem {
+    font-size: 1rem;
+    color: white;
+    margin: 10px 0;
+}
+
+@media screen and (max-width:750px) {
+    .footer {
+        width: 100%;
+        margin-top: 50px;
+        position: unset;
+        min-height: unset;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info {
+        width: calc(100% - 40px);
+        position: unset;
+        font-size: 0.7rem;
+    }
+
+    .info h1 {
+        text-align: center;
+    }
+
+    .info p {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .left {
+        position: unset;
+        top: unset;
+        padding: 10px;
+        width: calc(100% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: calc(40%);
+    }
+
+    .contact {
+        position: unset;
+        color: white;
+        display: none;
+    }
+    iframe {
+        width: 100%;
+        height: 200%;
+        
+    }
+
+    .buttons {
+        font-size: 0.9rem;
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid black;
+    }
+
+    .buttonContent {
+        height: 85%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 5px;
+        font-size: 1rem;
+        padding: 10px;
+        font-weight: 600;
+        box-shadow: 0 10px 20px white;
+        background-color: black;
+    }
+
+    .socials {
+        left: unset;
+        right: 10px;
+        bottom: 25px;
+        width: 30%;
+
+    }
+}

@@ -1,0 +1,60 @@
+.homeContainer {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.title, .cont {
+    position: relative;
+    font-size: 6.2vw;
+    color: black;
+    -webkit-text-stroke: 0.15vw white;
+    text-transform: uppercase;
+}
+
+.title {
+    -webkit-text-stroke: 0.15vw black;
+}
+
+.title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    -webkit-text-stroke: 0vw black;
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: animate 6s linear forwards;
+}
+
+
+@keyframes animate {
+    0%,10%{
+        width: 0;
+    }
+    30%, 60%, 100% {
+        width: 100%;
+    }
+}
+
+
+.subtitle {
+    font-size: 2vw;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}

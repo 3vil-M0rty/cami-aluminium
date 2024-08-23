@@ -1,0 +1,93 @@
+:root {
+    --bg: #272727;
+    --bg-accent: #484a4d;
+    --text-color: #000000;
+    --nav-size: 60px;
+    --border: 1px solid #000000;
+    --border-radius: 8px;
+    --speed: 500ms;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    ;
+}
+
+
+.dropdown {
+    position: absolute;
+    top: 60px;
+    width: 300px;
+    transform: translateX(-45%);
+    color: white;
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow: hidden;
+    transition: height var(--speed) ease;
+}
+
+
+.menuItem {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+}
+
+
+.iconButton {
+    --button-size: calc(var(--nav-size) * 0.5);
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+}
+
+.iconButton:hover {
+    filter: brightness(0.4);
+}
+
+.iconButton svg {
+    fill: var(--text-color);
+    width: 20px;
+    height: 20px;
+}
+
+
+.menuItem .iconButton {
+    margin-right: 0.5rem;
+}
+
+
+.menuItem .iconButton:hover {
+    filter: none;
+}
+
+.menuItem:hover {
+    background-color: #525357;
+}
+
+.iconRight {
+    margin-left: auto;
+}
+
+.menu {
+    width: 100%;
+}
